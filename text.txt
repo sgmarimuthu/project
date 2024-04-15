@@ -1,0 +1,2 @@
+echo 'jenkins assignment'
+uptime
