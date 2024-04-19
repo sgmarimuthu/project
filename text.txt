@@ -4,30 +4,13 @@ pipeline{
         maven 'mymaven'
     }
     stages{
-        stage("checkout"){
+        stage(" git checkout"){
             steps{
-                git url:'https://github.com/akshu20791/DevOpsClassCodes'
+                git url:'https://github.com/sgmarimuthu/project'
             }
         }
-	    stage("akshat compilee"){
+	    stage("compile"){
             steps{
                 bat "mvn compile"
             } 
         }
-        stage("akshat testing"){
-            steps{
-                bat "mvn test"
-            }
-        }
-        stage("akshat qa"){
-            steps{
-                bat "mvn pmd:pmd"
-            }
-        }
-        stage("akshat package"){
-            steps{
-                bat "mvn package"
-            }
-        }
-    }
-}
